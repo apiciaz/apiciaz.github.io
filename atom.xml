@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://apiciaz.github.io</id>
+    <title>One Day at A Time</title>
+    <updated>2020-10-26T17:31:33.559Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://apiciaz.github.io"/>
+    <link rel="self" href="https://apiciaz.github.io/atom.xml"/>
+    <subtitle>&quot;Il faut cultiver notre jardin.&quot; - Voltaire</subtitle>
+    <logo>https://apiciaz.github.io/images/avatar.png</logo>
+    <icon>https://apiciaz.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, One Day at A Time</rights>
+</feed>
