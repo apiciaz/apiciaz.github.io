@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Calling Bullshit: Week 4 - 5 | One Day at A Time</title>
+<meta name="description" content="&#34;Il faut cultiver notre jardin.&#34; - Voltaire">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://apiciaz.github.io/favicon.ico?v=1606756239940">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://apiciaz.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://apiciaz.github.io">
+        <img class="avatar" src="https://apiciaz.github.io/images/avatar.png?v=1606756239940" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://apiciaz.github.io">
+        <h1 class="site-title">One Day at A Time</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            Home
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            Tags
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            Archives
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            About
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Calling Bullshit: Week 4 - 5</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-11-29</span>
+            
+          </div>
+          <div class="post-content">
+            <h1 id="week-4-statistical-traps-week-5-big-data"><strong>Week 4: Statistical Traps &amp; Week 5: Big Data</strong></h1>
+<h2 id="lecture-key-takeaways"><strong>Lecture Key Takeaways</strong></h2>
+<p><img src="https://apiciaz.github.io/post-images/1606753321827.jpg" alt="" loading="lazy"><br>
+<img src="https://apiciaz.github.io/post-images/1606753326374.jpg" alt="" loading="lazy"><br>
+<img src="https://apiciaz.github.io/post-images/1606753331248.jpg" alt="" loading="lazy"><br>
+<img src="https://apiciaz.github.io/post-images/1606753333921.jpg" alt="" loading="lazy"><br>
+<img src="https://apiciaz.github.io/post-images/1606753501808.png" alt="" loading="lazy"><br>
+Reaons why this plot is not a good representation of the physical decline of humans as they age.</p>
+<ol>
+<li>the data points are outliers (Olympian atheletes); the downward slope of the curve would be steeper for us mortals;</li>
+<li>each curve does not track a single person's performance over time;</li>
+<li>inconsistent sample sizes: more people of 30 years old run than people of 100 years old. (simulations prove that decreasing sample sizes of various distributions can indeed generate the same kind of curve)</li>
+<li>cohort effects: people of different ages experience different environmental circumstances (e.x. we observe more of today's 50 year olds exercise regularly than the 90 year olds, not just because of the age difference, but also higher awareness about health)<br>
+A graph of mean years of education of Italian citizens from 20 - 90 years old also show the same curve as scenescence. But one does not lose education over time. The increase in the number of colleges, years of mandatory education, social and political stability and other environmental factors all contribute to the trend we observe.<br>
+<img src="https://apiciaz.github.io/post-images/1606753337720.jpg" alt="" loading="lazy"></li>
+</ol>
+<h2 id="readings-key-takeaways"><strong>Readings Key Takeaways</strong></h2>
+<h3 id="david-lazer-et-al-2014"><a href="https://gking.harvard.edu/files/gking/files/0314policyforumff.pdf">David Lazer et al. (2014)</a> The Parable of Google Flu: Traps in Big Data Analysis. Science 343:1203-1205</h3>
+<p>Google Flu Trends project uses relative search terms to track/predict local flu infection level. It is not, however, very accurate, by doubling the CDC's estimates based on lab data across the U.S. Through this example, the authors discuss two mistakes people make in Big Data and principles for future researches.</p>
+<ol>
+<li>
+<p>Big Data Hubris</p>
+<ol>
+<li>large quantity of data not collected by careful design cannot substitute for traditional data collection in scientific analysis;</li>
+<li>overfitting large number of search terms (50 million) to a few data points (1152) that are not public leads to consistent errors;</li>
+</ol>
+</li>
+<li>
+<p>Algorithm Dynamics</p>
+<ol>
+<li>changes made by engineers and users (e.x recommended search terms, returning diagnosis for symptoms which leads to searches about how to distinguish flu from cold) increase the magnitude of searches; however, researchers assume that the change in magnitude is external, not endogenous.</li>
+<li>users, knowing their search is monitered, manipuate search to meet their own goals (pharmas, ad companies, etc).</li>
+</ol>
+</li>
+<li>
+<p>Transparency about data and algorithm that generates data,</p>
+</li>
+<li>
+<p>Use the advantage of big data to get localized observations,</p>
+</li>
+<li>
+<p>all data, big or small, can benefit from innovative analyses.</p>
+</li>
+</ol>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://apiciaz.github.io/hillbilly-elegy-dian-ying-guan-hou/">
+              <h3 class="post-title">
+                下一篇：Hillbilly Elegy 電影觀後
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">"Il faut cultiver notre jardin." - Voltaire</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://apiciaz.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '323a9e6dce57d91e79d3',
+        clientSecret: 'cac043971e5b06b0403bf116f1beacaf060c9fc7',
+        repo: 'apiciaz.github.io/apiece/',
+        owner: 'apiciaz',
+        admin: ['apiciaz'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
